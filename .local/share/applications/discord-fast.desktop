@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Discord (Fast Startup - Optimized)
+Comment=Voice and text chat for gamers
+Exec=/usr/bin/discord --enable-features=UseOzonePlatform --ozone-platform=x11 --disable-dev-mode
+Terminal=false
+Type=Application
+Icon=discord
+Categories=Network;InstantMessaging;
+StartupWMClass=discord

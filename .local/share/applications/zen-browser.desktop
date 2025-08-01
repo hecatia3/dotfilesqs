@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Zen Browser
+Exec=env MOZ_ENABLE_WAYLAND=1 /usr/bin/zen-browser %u
+Terminal=false
+Type=Application
+Categories=Network;WebBrowser;
+MimeType=x-scheme-handler/http;x-scheme-handler/https;
+StartupNotify=true
+Icon=zen-browser
+
