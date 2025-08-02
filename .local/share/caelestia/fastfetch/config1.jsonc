@@ -1,0 +1,110 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "source": "/home/laheca/Pictures/Wallpapers/fastfetch1.jpg",
+        "type": "kitty",
+        "height": 14,
+        "padding": {
+          "left": 3,
+          "top": 2,
+     },
+    },
+    "display": {
+        "separator": "  ",
+        "color": "white",
+        "constants": [
+      "\u001b[38;5;15m",  // $1 - putih
+      "\u001b[38;5;250m", // $2 - abu muda
+      "\u001b[38;5;245m", // $3 - abu
+      "\u001b[38;5;31m",  // $4 - biru terang
+      "\u001b[38;5;32m",  // $5 - hijau
+      "\u001b[38;5;220m", // $6 - kuning
+      "\u001b[38;5;208m", // $7 - oranye
+      "\u001b[38;5;196m"  // $8 - merah
+      ]
+    },
+    "modules": [
+        "break",
+        {
+            "type": "custom",
+            "key": "╭───────────────────────────────────╮"
+        },
+        {
+            "type": "kernel",
+            "key": "│ {$2}{$1}  kernel",
+            "format": "{$2}{release>22}{$1} │"
+        },
+        {
+            "type": "wm",
+            "key": "│   wm",
+            "format": "{>26} │"
+        },
+        {
+            "type": "command",
+            "key": "│   uptime",
+            "text": "uptime -p | cut -d ' ' -f 2-",
+            "format": "{$2}{>22}{$1} │"
+        },
+        {
+            "type": "shell",
+            "key": "│ {$2}{$1}  shell ",
+            "format": "{$2}{pretty-name>22}{$1} │"
+        },
+        {
+            "type": "terminal",
+            "key": "│ {$1}{$1}  termial ",
+            "format": "{$1}{pretty-name>20}{$1} │"
+        },
+        {
+            "type": "command",
+            "key": "│ {$3}{$1}  mem   ",
+            "text": "free -m | awk 'NR==2{printf \"%.2f GiB / %.2f GiB\",$3/1024,$2/1024}'",
+            "format": "{$3}{>22}{$1} │"
+        },
+        {
+            "type": "packages",
+            "key": "│   pkgs  ",
+            "format": "{all>22} │"
+        },
+        {
+            "type": "command",
+            "key": "│ {$2}{$1}  user  ",
+            "text": "echo $USER",
+            "format": "{$2}{>22}{$1} │"
+        },
+        {
+            "type": "command",
+            "key": "│   hname ",
+            "text": "hostnamectl hostname",
+            "format": "{>22} │"
+        },
+        {
+            "type": "os",
+            "key": "│ {$4}󰻀{$1}  distro",
+            "format": "{$4}{pretty-name>22}{$1} │"
+        },
+        {
+            "type": "os",
+            "key": "│ {$4}󰻀{$1}  distro",
+            "format": "{$4}{pretty-name>22}{$1} │"
+        },
+        {
+            "type": "os",
+            "key": "│ {$4}󰻀{$1}  distro",
+            "format": "{$4}{pretty-name>22}{$1} │"
+        },
+        {
+            "type": "custom",
+            "key": "│{$3}   {$1}●   {$2}●   {$3}●   {$4}●   {$5}●   {$6}●   {$7}●   ●   {$1}│",
+        },
+        {
+            "type": "custom",
+            "key": "│{$3}   ●   ●   ●   ●   ●   ●   ●   ●   {$1}│",
+        },
+        {
+            "type": "custom",
+            "key": "╰───────────────────────────────────╯"
+        },
+        "break"
+    ]
+}
